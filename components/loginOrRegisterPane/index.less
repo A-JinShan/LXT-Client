@@ -1,0 +1,124 @@
+@import "../../config/config";
+
+.lr-mask {
+  display: none;
+
+  &.show {
+    display: block;
+  }
+
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 6666;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+
+  .lr-pane {
+    padding: 30px 20px;
+    width: 440px;
+    height: 440px;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin: 100px auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .close {
+      font-size: 22px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
+    .tabs {
+      height: 50px;
+      display: flex;
+
+      li {
+        flex: 1;
+        text-align: center;
+        line-height: 50px;
+        color: #999;
+        font-size: 20px;
+        cursor: pointer;
+        border-bottom: 2px solid #ccc;
+
+        &.current {
+          color: #333;
+          border-bottom-color: @themeColor;
+        }
+      }
+    }
+
+    .panes {
+      flex: 1;
+      //background-color: grey;
+      position: relative;
+
+      li {
+        width: 100%;
+        height: 100%;
+        //background-color: tomato;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+
+        &.current {
+          display: block;
+        }
+
+        form {
+          margin-top: 50px;
+          display: flex;
+          flex-direction: column;
+
+          label {
+            position: relative;
+
+            span {
+              position: absolute;
+              left: 10px;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+
+            input {
+              height: 40px;
+              width: 100%;
+              padding-left: 32px;
+              box-sizing: border-box;
+              border: 1px solid #c5cddb;
+              outline: none;
+
+              &:focus {
+                border-color: @themeColor;
+              }
+            }
+
+            &:nth-child(2) {
+              margin: 30px 0;
+            }
+          }
+
+          .btn {
+            margin-top: 40px;
+            width: 100%;
+            height: 44px;
+            text-align: center;
+            line-height: 44px;
+            background-color: @themeColor;
+            color: #fff;
+            font-size: 18px;
+            letter-spacing: 2px;
+            border: none;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}

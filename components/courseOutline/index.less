@@ -1,0 +1,78 @@
+@import "../../config/config";
+
+
+.course-dg {
+  //background-color: grey;
+  height: 200px;
+
+  &.no-view {
+    .c-view {
+      display: none;
+    }
+  }
+
+  .dg {
+    position: relative;
+    &::before {
+      content: "";
+      width: 1px;
+      height: 100%;
+      background-color: #ccc;
+      position: absolute;
+      top: 0;
+      left: 68px;
+    }
+    li {
+      line-height: 40px;
+      display: flex;
+      align-items: center;
+      color: #999;
+      cursor: default;
+      &:hover {
+        color: @themeColor;
+        .c-view {
+          color: @themeColor;
+          border-color: @themeColor;
+        }
+      }
+      .c-num {
+        width: 60px;
+        font-size: 12px;
+      }
+      .c-progress {
+        background-color: #fff;
+        z-index: 9;
+        width: 16px;
+        height: 14px;
+        //background-color: green;
+        background-image: url(/assets/images/listIcons.png);
+        background-position: -136px -113px;
+        &.no-finish {
+          background-position: -169px -113px;
+        }
+        &.finished {
+          background-position: -200px -113px;
+        }
+      }
+      .c-title {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 14px;
+        padding-left: 10px;
+      }
+      .c-view {
+        width: 70px;
+        line-height: 30px;
+        border: 1px solid #999;
+        border-radius: 5px;
+        font-size: 12px;
+        color: #999;
+        text-align: center;
+
+      }
+    }
+  }
+
+}

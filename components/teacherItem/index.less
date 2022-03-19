@@ -1,0 +1,70 @@
+@import "../../config/config";
+
+.teacher-item {
+  margin-top: 20px;
+  //border: 1px solid tomato;
+  padding: 10px 15px;
+  background-color: #fff;
+  //box-sizing: border-box;
+  .intro {
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    .message {
+      height: 100%;
+      //background-color: grey;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      .t-header {
+        width: 60px;
+        height: 60px;
+        border: 1px solid @themeColor;
+        box-sizing: border-box;
+        border-radius: 30px;
+        position: relative;
+        overflow: hidden;
+      }
+      .t-profile {
+        flex: 1;
+        height: 60px;
+        //background-color: tomato;
+        padding:10px 0 0 20px;
+        .position-name {
+          font-size: 18px;
+          color: #424242;
+          &.is-star::after {
+            content: "星级讲师";
+            font-size: 12px;
+            color: #a5571b;
+            background-color: #ffd2af;
+            padding: 0 5px;
+            border-radius: 3px;
+          }
+        }
+        .class-count {
+          font-size: 12px;
+          color: #999;
+          margin-top: 8px;
+        }
+      }
+    }
+    .to-detail {
+      width: 98px;
+      height: 34px;
+      color: @themeColor;
+      border: 1px solid @themeColor;
+      border-radius: 5px;
+      display: block;
+      text-align: center;
+      line-height: 34px;
+    }
+  }
+  .desc {
+    min-height: 80px;
+    line-height: 35px;
+    letter-spacing: 2px;
+    text-shadow: 5px 5px 5px grey;
+  }
+}

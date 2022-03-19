@@ -1,0 +1,39 @@
+@import "../../config/config";
+
+.article-item {
+  background-color: #fff;
+  padding: 5px;
+  border-bottom: 1px solid #999;
+  .top {
+    height: 30px;
+    //background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+      font-size: 16px;
+      color: #424242;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      &:hover {
+        color: @themeColor;
+      }
+    }
+    .time {
+      font-size: 14px;
+      color: #999;
+      min-width: 190px;
+      text-align: right;
+    }
+  }
+  .bottom {
+    min-height: 50px;
+    //background-color: darkcyan;
+    font-size: 14px;
+    color: #999;
+    letter-spacing: 2px;
+    line-height: 20px;
+    text-indent: 2em;
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../config/config";
+
+
+.news-card {
+  width: 500px;
+  //height: 100px;
+  background-color: #fff;
+  box-shadow: 2px -1px 10px 0 rgba(0,0,0,.15);
+  ul {
+    padding: 5px 10px;
+    li {
+      line-height: 36px;
+      display: flex;
+      justify-content: space-between;
+      a {
+        color: #333;
+        font-size: 15px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        &:hover {
+          color: @themeColor;
+        }
+      }
+      span {
+        margin-left: 15px;
+        min-width: 190px;
+        font-size: 15px;
+        color: #999;
+      }
+    }
+  }
+}

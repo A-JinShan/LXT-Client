@@ -1,0 +1,154 @@
+@import "../../config/config";
+
+.edit-pane {
+  background-color: #fff;
+  box-shadow: 0 1px 2px #bbb;
+  margin: 15px auto;
+  .tabs {
+    height: 44px;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #fafafa;
+    display: flex;
+
+    li {
+      line-height: 44px;
+      font-size: 15px;
+      color: #444;
+      font-weight: bold;
+      padding: 0 20px;
+      cursor: pointer;
+
+      &.current {
+        background-color: @themeColor;
+        color: #fff;
+      }
+    }
+  }
+
+  .panes {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      display: none;
+
+      &.current {
+        display: block;
+      }
+
+      .notice {
+        line-height: 40px;
+        margin-left: 20px;
+        font-size: 12px;
+        font-family: '宋体', sans-serif;
+        color: #ccc;
+      }
+
+      table {
+        margin-left: 10px;
+
+        caption {
+          font-size: 21px;
+          color: #444;
+          text-align: left;
+        }
+
+        tr {
+          //padding: 15px;
+          td {
+
+            padding: 15px 0;
+
+            label {
+              font-size: 14px;
+              color: #666;
+              width: 100px;
+              display: inline-block;
+              text-align: right;
+              padding-right: 10px;
+            }
+
+            input:not([type="file"]),
+            textarea {
+              padding: 2px 5px;
+              line-height: 23px;
+              color: #333;
+              font-size: 12px;
+              outline: none;
+              background: #FAFAFA;
+              border: 1px solid #DFDFDF;
+              box-shadow: inset 1px 1px 2px #DFDFDF;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+              text-align: center;
+              padding-left: 10px;
+              width: 68px;
+              font-size: 16px;
+              height: 44px;
+              line-height: 42px;
+              color: #fff;
+              background-color: @themeColor;
+              display: inline-block;
+              border: 0;
+              outline: none;
+            }
+
+            input[type="reset"] {
+              color: #666;
+              background-color: #ddd;
+            }
+
+            textarea {
+              width: 395px;
+              height: 75px;
+              resize: none;
+            }
+
+            .header-wrap {
+              width: 120px;
+              height: 120px;
+              background-color: tomato;
+              position: relative;
+
+              &:hover {
+                .mask {
+                  display: block;
+                }
+              }
+
+              img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+              }
+
+              .mask {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-size: 12px;
+                color: #fff;
+                text-align: center;
+                line-height: 120px;
+                background-color: rgba(0, 0, 0, 0.5);
+                display: none;
+                cursor: pointer;
+              }
+
+              input[type="file"] {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

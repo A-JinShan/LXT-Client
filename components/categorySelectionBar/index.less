@@ -1,0 +1,40 @@
+@import "../../config/config";
+
+.category-bar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: @fourthLevelZIndex;
+
+  min-width: 1205px;
+  height: 40px;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,.04);
+  background: linear-gradient(#f7f6f8,#fff 20%);
+  .content {
+    height: 100%;
+    background-color: #fff;
+    dl {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      dt {
+        color: #949fab;
+        font-size: 16px;
+      }
+      dd {
+        line-height: 30px;
+        margin: 0 0 0 15px;
+        color: #6b6578;
+        padding: 0 10px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        //box-sizing: border-box;
+        &.selected {
+          color: @themeColor;
+          border-color: @themeColor;
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+}

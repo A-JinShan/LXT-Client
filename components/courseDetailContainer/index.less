@@ -1,0 +1,69 @@
+@import "../../config/config";
+
+.detail-container {
+  //background-color: grey;
+  .top {
+    background-color: #fff;
+    height: 36px;
+    .tabs {
+      height: 100%;
+      //background-color: palegoldenrod;
+      display: flex;
+      li {
+        padding: 0 15px;
+        line-height: 36px;
+        //background-color: green;
+        font-size: 16px;
+        color: #333;
+        cursor: pointer;
+        &:hover {
+          color: @themeColor;
+        }
+        &.current {
+          color: #fff;
+          background-color: #ccc;
+          &:hover {
+            background-color: @themeColor;
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    margin-top: 20px;
+    min-height: 400px;
+    display: flex;
+    .left {
+      flex: 1;
+      margin-right: 20px;
+      overflow: hidden;
+      //background-color: orange;
+      .panes {
+        width: 100%;
+        //height: 100%;
+        //background-color: pink;
+        //position: relative;
+        >li {
+          width: 100%;
+          //height: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+          background-color: #fff;
+          //position: absolute;
+          //top: 0;
+          //left: 0;
+          display: none;
+          &.current {
+            display: block;
+          }
+        }
+      }
+    }
+    .right {
+      width: 280px;
+      div {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
